@@ -4,7 +4,7 @@ const initialState = {
     books: {}
 }
 
-const usersSlice = createSlice({
+const booksSlice = createSlice({
     name: 'books',
     initialState: initialState,
     reducers: {

@@ -4,7 +4,7 @@ const initialState = {
     themes: {}
 }
 
-const usersSlice = createSlice({
+const themesSlice = createSlice({
     name: 'themes',
     initialState: initialState,
     reducers: {
