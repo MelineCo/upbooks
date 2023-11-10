@@ -15,7 +15,8 @@ const usersSlice = createSlice({
             name : name,
             surname : surname,
             addedBooks : [],
-            addedComments: []
+            addedComments: [],
+            pile: []
         }
       }
     }
