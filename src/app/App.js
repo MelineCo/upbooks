@@ -1,12 +1,13 @@
-import logo from "./logo-150.png"
+import Header from '../components/Header'
+import Thread from '../components/Thread'
+import NoBooksFound from '../features/books/NoBooksFound';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-      </header>
+      <Header />
+      <Thread />
+      <NoBooksFound />
     </div>
   );
 }
