@@ -4,7 +4,6 @@ const Thread = () => {
     return (
       <>
         <Booklist />
-        <p>Test thread</p>
       </>
     );
   };

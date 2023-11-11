@@ -1,13 +1,11 @@
 import Header from '../components/Header'
 import Thread from '../components/Thread'
-import NoBooksFound from '../features/books/NoBooksFound';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
       <Thread />
-      <NoBooksFound />
     </div>
   );
 }

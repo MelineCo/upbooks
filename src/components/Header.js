@@ -10,7 +10,6 @@ const Header = () => {
         </header>
         <div className="actions">
             <SearchBar />
-            <AddBookButton />
         </div>
         </>
     );

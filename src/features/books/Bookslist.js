@@ -1,25 +1,24 @@
 import Book from './Book';
 import { selectBooks } from './booksSlice';
 import { useSelector } from 'react-redux';
+import Votes from '../../components/Votes'
 
 function Booklist(props) {
     const books = useSelector(selectBooks);
     return (
-        <div>
-        {props.books?.map((book, index) => {
-            return <Book key={index} book={book} />
-        })}
+        <div className="container max-w-2xl">
         <h1>Books</h1>
-        <ul>
+        <ul role="list" class="divide-y divide-gray-100">
             {Object.values(books).map((book) => (
-            <li key={book.id}>
-            <div>
-                <img src={book.cover} alt="" style={{height: "150px"}} />
-                <div>
-                <h2>{book.title}</h2>
-                <p>{book.pages} pages</p>
+            <li className="flex justify-between gap-x-6 py-5" key={book.id}>
+                <div class="flex min-w-0 gap-x-4">
+                    <img class="h-12 w-12 flex-none rounded-lg bg-gray-50" src={book.cover} alt="" />
+                    <div class="min-w-0 flex-auto">
+                        <p class="text-sm truncate font-semibold leading-6 text-gray-900">{book.title}</p>
+                        <p class="mt-1 truncate text-xs leading-5 text-gray-500">Par {book.author}</p>
+                    </div>
                 </div>
-            </div>
+                <Votes upvotes={book.upvotes} downvotes={book.downvotes} />
             </li>
             ))}
         </ul>
