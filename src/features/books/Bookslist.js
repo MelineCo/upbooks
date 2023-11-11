@@ -15,7 +15,7 @@ function Booklist(props) {
                     <img class="h-12 w-12 flex-none rounded-lg bg-gray-50" src={book.cover} alt="" />
                     <div class="min-w-0 flex-auto">
                         <p class="text-sm truncate font-semibold leading-6 text-gray-900">{book.title}</p>
-                        <p class="mt-1 truncate text-xs leading-5 text-gray-500">Par {book.author}</p>
+                        <p class="mt-0 truncate text-xs leading-5 text-gray-500">{book.author}</p>
                     </div>
                 </div>
                 <Votes upvotes={book.upvotes} downvotes={book.downvotes} />
