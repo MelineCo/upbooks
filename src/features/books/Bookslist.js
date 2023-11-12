@@ -3,7 +3,7 @@ import { selectBooks } from './booksSlice';
 import { useSelector } from 'react-redux';
 import Votes from '../../components/Votes'
 
-function Booklist(props) {
+function Booklist() {
     const books = useSelector(selectBooks);
     return (
         <div className="container max-w-2xl">
@@ -18,7 +18,7 @@ function Booklist(props) {
                         <p class="mt-0 truncate text-xs leading-5 text-gray-500">{book.author}</p>
                     </div>
                 </div>
-                <Votes upvotes={book.upvotes} downvotes={book.downvotes} />
+                <Votes id={book.id} votes={book.votes} />
             </li>
             ))}
         </ul>

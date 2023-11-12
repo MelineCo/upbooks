@@ -6,7 +6,7 @@ const initialState = {
       id: "0988JGHYU789JKKK",
       title : "La cure anti-parasitaire",
       author : "Hulda Clark",
-      upvotes : 535,
+      votes : 535,
       cover: "https://m.media-amazon.com/images/I/61u-XnrTKKL._SL1500_.jpg",
       postedBy: "0001",
       postedDate: "01/01/2023",
@@ -18,7 +18,7 @@ const initialState = {
       id: "0988JG89789JKKK",
       title : "La cure anti-sucre",
       author : "Dr Insuline",
-      upvotes : 41,
+      votes : 41,
       cover: "https://m.media-amazon.com/images/I/71si9Y4zl3L._SL1360_.jpg",
       postedBy: "0001",
       postedDate: "01/01/2023",
@@ -30,7 +30,7 @@ const initialState = {
       id: "0988JGHYU789JKKjui",
       title : "Hormone Repair Manual: Every Woman's Guide to Healthy Hormones After 40",
       author : "Lara Briden",
-      upvotes : 145,
+      votes : 145,
       cover: "https://m.media-amazon.com/images/I/4126yKKWJyL.jpg",
       postedBy: "0001",
       postedDate: "01/01/2023",
@@ -42,7 +42,7 @@ const initialState = {
       id: "0988JG89789Jtyh",
       title : "Period repair manual",
       author : "Lara Briden",
-      upvotes : 81,
+      votes : 81,
       cover: "https://m.media-amazon.com/images/I/51pVfi-MDML.jpg",
       postedBy: "0001",
       postedDate: "01/01/2023",
@@ -63,7 +63,7 @@ const booksSlice = createSlice({
             id: id,
             title : title,
             author : author,
-            upvotes : 0,
+            votes : 0,
             cover: cover,
             postedBy: postedBy,
             postedDate: postedDate,
@@ -71,11 +71,19 @@ const booksSlice = createSlice({
             pages: pages,
             comments: []
         }
+      },
+      upvote: (state, action) => {
+        const { id } = action.payload;
+        if(state.books[id]){
+          state.books[id].votes += 1;
+        }
       }
     }
   })
 
   
-  export const { addBook } = booksSlice.actions
+  export const { addBook, upvote } = booksSlice.actions
   export default booksSlice.reducer
   export const selectBooks = (state) => state.books.books
+
+ 
