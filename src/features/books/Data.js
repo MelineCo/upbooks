@@ -1,7 +1,10 @@
 import { useGetBookQuery  } from "../../app/apiSlice";
+import { useSelector } from "react-redux";
+import { selectSearch } from "../search/searchSlice";
 
 export const Data = () => {
-    const { data } = useGetBookQuery("olaf");
+    const search = useSelector(selectSearch)
+    const { data } = useGetBookQuery(`${search}`);
 
     console.log(data);
     return (

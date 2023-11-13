@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
-import { modifySearch, selectSearch } from '../features/search/searchSlice'
+import { modifySearch } from '../features/search/searchSlice'
 
 
 const SearchBar = () => {
