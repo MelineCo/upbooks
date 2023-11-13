@@ -1,4 +1,3 @@
-import Book from './Book';
 import { selectBooks } from './booksSlice';
 import { useSelector } from 'react-redux';
 import Votes from '../../components/Votes'
@@ -16,6 +15,7 @@ function Booklist() {
                     <div class="min-w-0 flex-auto">
                         <p class="text-sm truncate font-semibold leading-6 text-gray-900">{book.title}</p>
                         <p class="mt-0 truncate text-xs leading-5 text-gray-500">{book.author}</p>
+                        <p class="mt-2 truncate text-xs leading-5 text-gray-500">{book.comments.length} reviews</p>
                     </div>
                 </div>
                 <Votes id={book.id} votes={book.votes} />
