@@ -19,5 +19,3 @@ export default function BookCard(props) {
             </li>
     );
 };
-
-// Ajouter bouton "Add to pile"
