@@ -12,7 +12,7 @@ export const Data = () => {
             {isLoading && <p>...loading</p>}
             {isSuccess && (
                 <>
-                <h1>Results</h1>
+                <span className="flex gap-x-3 rounded-md text-xs leading-6 font-semibold">Search results</span>
                 <ul role="list" className="divide-y divide-gray-100">
                     {data.items.map(book => {
                         return < BookCard id={book.id} volumeInfo={book.volumeInfo} />
