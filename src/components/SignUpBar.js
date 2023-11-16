@@ -1,6 +1,6 @@
 import photo from '../sincerely-media-oKbHnbz2njQ-unsplash.jpg'
 
-const JoinIn = () => {
+const SignUpBar = () => {
     return (
         <>
             <header className="container max-w-2xl mb-6">
@@ -12,8 +12,8 @@ const JoinIn = () => {
                                 Join in and help others prioritize<br /> their reading piles.
                             </p>
                             <div className="flex flex-col mt-4">
-                                <button type="button" class="m-1 rounded-md bg-rose-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Join in</button>
-                                <button type="button" class="m-1 rounded-md hover:bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Sign in</button>
+                                <button type="button" class="mb-1 rounded-md bg-rose-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-rose-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Sign up</button>
+                                <button type="button" class="mt-1 rounded-md hover:bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">Sign in</button>
 
                             </div>
                         </div>
@@ -25,5 +25,5 @@ const JoinIn = () => {
     );
 };
 
-export default JoinIn;
+export default SignUpBar;
 

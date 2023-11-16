@@ -1,7 +1,6 @@
 import { CategoriesSideBar } from '../components/CategoriesSideBar';
-import JoinIn from '../components/JoinIn'
+import SignUpBar from '../components/SignUpBar'
 import Navbar from '../components/Navbar';
-import Thread from '../components/Thread'
 import { Data } from '../features/books/Data';
 
 function App() {
@@ -18,7 +17,7 @@ function App() {
         </main>
 
         <aside class="sticky top-8 hidden w-96 shrink-0 xl:block">
-          <JoinIn />
+          <SignUpBar />
         </aside>
       </div>
 
@@ -27,3 +26,9 @@ function App() {
 }
 
 export default App;
+
+{/* <Subreddits
+          state={state}
+          dispatch={dispatch}
+          changeResults={changeResults}
+        /> */}
